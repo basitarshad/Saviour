@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { Constants, Location, Permissions } from 'expo';
-import {MapView} from 'react-native-maps';
+import MapView from 'react-native-maps';
 
 export default class App extends Component {
   state = {
@@ -83,3 +83,4 @@ const styles = StyleSheet.create({
     color: '#34495e',
   },
 });
+Expo.registerRootComponent(App);
