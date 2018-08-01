@@ -1,4 +1,4 @@
-import React from 'C:/Users/Basit/AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
+import React from 'react';
 import { StyleSheet,
     Text,
     View,

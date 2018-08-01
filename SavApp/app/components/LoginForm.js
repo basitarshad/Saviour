@@ -1,15 +1,29 @@
-import React from 'C:/Users/Basit/AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
+import React from 'react';
 import {
     StyleSheet,
     View,
     TextInput,
     TouchableOpacity,
     Text,
-    KeyboardAvoidingView
+    KeyboardAvoidingView,
+    AppRegistry
 } from 'react-native';
+import {
+    Card,
+    CardImage,
+    CardTitle,
+    CardContent,
+    CardAction
+  } from 'react-native-card-view';
+import Button from 'react-native-button';
 
 export default class LoginForm extends React.Component
 {
+    RegisterActivity = () =>
+ {
+    this.props.navigation.navigate('First');
+    
+ }
     render()
     {
         return(
@@ -34,9 +48,7 @@ export default class LoginForm extends React.Component
             <Text style={styles.registerTxt}>Register here!</Text>
             </View>
 
-            </View>
-
-            
+            </View> 
         );
     }
 }
