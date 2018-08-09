@@ -2,6 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class Notifications extends React.Component {
+  static navigationOptions = {
+    title: 'Notifications',
+  }
+  
   render() {
     return (
       <View style={styles.container}>

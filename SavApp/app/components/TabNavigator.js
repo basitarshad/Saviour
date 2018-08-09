@@ -4,11 +4,12 @@ import Icon from '@expo/vector-icons';
 import LoginForm from './LoginForm';
 import RegForm from './RegForm';
 import Notificationss from './Notifications';
+import ProfileScreen from './ProfileScreen';
 
 var myTabs = createBottomTabNavigator({
     Home:{screen:LoginForm},
     Register:{screen:RegForm},
-    Notifications:{screen:Notificationss}
+    Profile:{screen:ProfileScreen}
  },
 {
  //   tabBarPosition:'bottom',
