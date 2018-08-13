@@ -111,7 +111,9 @@ class SettingsScreen extends React.Component {
     this.state=
     {
       email:'',
-      password:''
+      password:'',
+      uid:'',
+      email:''
     }
   }
 
@@ -121,8 +123,23 @@ class SettingsScreen extends React.Component {
  .catch((error)=>{
       console.log(error);
     });
-  }
+  fire.auth().onAuthStateChanged(function(user){
+    if(user)
+    {
+      var userid = user.uid;
+      var mail = user.email;
+      this.setState({uid:userid,email:mail},this.pasteInDb());
 
+    }
+    else
+    {
+      console.log('error');
+    }
+  })
+  }
+  pasteInDb(){
+    fire.database.ref('users/').child(this.state.userid).push({email:this.state.mail});
+  }
     render() {
     return (
       <Container style={styles.container}>

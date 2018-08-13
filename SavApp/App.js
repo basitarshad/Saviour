@@ -74,8 +74,9 @@ class App extends React.Component {
           this.setState({user:null});
         }
       });
+      console.log('current user is:');
+console.log(user);
     }
-
       render() {
         return (
           
@@ -83,7 +84,7 @@ class App extends React.Component {
           // {this.state.user?<BottomNav/> : <HomeScreen/>}
           // </View>
           <View style = {{flex: 1}}>
-          <ImageUpload />
+          <BottomNav/>
           </View>
         );
       }
